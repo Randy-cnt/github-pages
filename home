@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO - Agencia de Viajes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero {
+            background: url('images/destin.png') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            color: #fff;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .hero {
+            background: url('images/destin.png') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+            max-width: 1200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .reserva-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .reserva-container img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+            display: grid;
+            gap: 15px;
+        }
+
+        form input, form select, form button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        form button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff3c00;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .cta:hover {
+            background-color: #e63900;
+        }
+
+        blockquote {
+            background-color: #f9f9f9;
+            border-left: 4px solid #007bff;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        blockquote img {
+            float: left;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #bfbfbf;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: #ffffff;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .footer-socials a {
+            color: #bfbfbf;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-socials a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: 20px;
+            border-top: 1px solid #444444;
+            padding-top: 10px;
+            color: #bfbfbf;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .slide{
+            animation: slideIn 2s ease-in-out;
+        }
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        .blink-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: blink 1.5s infinite;
+        }
+
+        .blink-button:hover {
+            background-color: #2c8ff8;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        
+        <img src="images/avionlogo.png" alt="Logo de Agencia">
+        <nav>
+            <a href="home.html">Inicio</a>
+            <a href="desstinos.html">Destinos</a>
+            <a href="#reserva">Reservar</a>
+            <a href="#suscribete">Suscríbete</a>
+            <form class="ms-3">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="blink-button" type="submit">Buscar</button>
+                </div>
+            </form>
+        </nav>
+    </header>
+    <div class="slide">
+        <div class="hero">
+            <img src="images/porta.png" alt="imagen de formulario" >
+        </div>
+    </div>
+    <section id="reserva">
+        <h2>Reserva tu Vuelo</h2>
+        <div class="reserva-container">
+            <img src="images/mistebis.jpg" alt="Imagen de formulario">
+            <form action="#reserva">
+                <select id="origen" name="origen" required>
+                    <option value="">Selecciona tu Origen</option>
+                    <option value="Lima">Lima</option>
+                    <option value="Piura">Piura</option>
+                    <option value="Cusco">Cusco</option>
+                    <option value="Arequipa">Arequipa</option>
+                </select>
+                <select id="destino" name="destino" required>
+                    <option value="">Selecciona tu Destino</option>
+                    <option value="París">París</option>
+                    <option value="Tokio">Tokio</option>
+                    <option value="Nueva York">Nueva York</option>
+                </select>
+                <div class="input-group">
+                <a>Fecha de ida: </a>
+                <input type="date" id="fecha-ida" name="fecha-ida" placeholder="Fecha de ida">
+                </div>
+                <div class="input-group">
+                <a>Fecha de regreso: </a>
+                <input type="date" id="fecha-regreso" name="fecha-regreso" placeholder="Fecha de regreso">
+                </div>
+                <input type="number" id="pasajeros" name="pasajeros" placeholder="Cantidad de pasajeros" min="1" max="10">
+                <button class="blink-button" type="submit">Reservar</button>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <h2>Grandes Beneficios</h2>
+        <img src="images/offerta.png" alt="Beneficios">
+        <p>Disfruta de precios bajos y un servicio al cliente excepcional.</p>
+        <a href="#reserva1" class="cta">Seleccionar Vuelo</a>
+    </section>
+
+    <section>
+        <h2>Reseñas Destacadas</h2>
+        <blockquote>
+            <img src="images/descarga.jpg" width="80">
+            "Un servicio excelente, superó mis expectativas." Juan Torres
+        </blockquote>
+        <blockquote>
+            <img src="images/A1.jpg" width="80">
+            "Definitivamente volveré a viajar con esta agencia." Esteban Arroyo
+        </blockquote>
+        <blockquote>
+            <img src="images/A2.jpg" width="80">
+            "¡El mejor viaje de mi vida! Excelente experiencia." Gabriel Huerta
+        </blockquote>
+    </section>
+    <section id="suscribete">
+        <article>
+            <h2>Suscríbete Ahora!</h2>
+                <p>Unete a nuestros lectores diarios y Mantente al tanto de nuestras ofertas</p>
+                <form action="#suscribete">
+                    <div>
+                        <input type="email" placeholder="Email" required>
+                        <button class="blink-button" type="submit">Suscribirse</button>
+                    </div>
+                </form>
+        </article>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="section -">
+                <h3>Sobre Nosotros</h3>
+                <p> Somos bloggers, organizadores de viajes y </p>
+                <p>exploradores apasionados por el sol, el mar</p>
+                <p>y la aventura.Después de ocho años y más de</p>
+                <p>60 países, seguimos en el camino.</p>
+            </div>
+            <div class="section">
+                <h3>Contacto</h3>
+                <p><a>Dirección: 221B John Hope Street, Lekki, Lagos, Nigeria</a></p>
+                <p><a>Teléfono: +51 999 999 999</a></p>
+                <p><a>Email: info@wordlexploring.com</a></p>
+                <p>Web: <a href="https://www.Wordlexploring.com" target="_blank">www.WordlExploring.com</a></p>
+            </div>
+            <div class="section">
+                <p><a href="home.html">Inicio</a></p>
+                <p><a href="desstinos.html">Destinos</a></p>
+                <p><a href="#reserva">Reservar</a></p>
+                <p><a href="#suscribete">Suscribete</a></p>
+                <div>
+                    <a href="https://www.facebook.com/" title="Facebook">F</a>
+                    <a href="https://x.com/?lang=es" title="Twitter">X</a>
+                    <a href="https://pe.linkedin.com/" title="LinkedIn">in</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p>   .</p>
+        </div>
+        <article style="text-align: center; border-top: 1px dashed; border-color: #ffffff; padding-top: 20px; padding-bottom: 60px;">
+            <div class="footer-bottom">
+                &copy; 2024 WordlExploring. Todos los derechos reservados. | Términos | Privacidad | Mapa del Sitio
+            </div>
+        </article> 
+    </footer>
+    </body>
+    </html>
